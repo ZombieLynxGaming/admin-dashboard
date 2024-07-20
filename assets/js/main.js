@@ -1,20 +1,6 @@
-var preloaderInit = function preloaderInit() {
-  var preloader = document.querySelector('.preloader');
-  setTimeout(function () {
-    preloader?.classList.add('loaded');
-    setTimeout(function () {
-      preloader?.remove();
-    }, 0); // Remove preloader immediately after setting it to 'loaded'
-  }, 3000); // Keep the preloader for 5 seconds
-};
-
-function convertNewlinesToBr(str) {
-  return str.replace(/\n/g, '<br>');
-}
-
 const token = sessionStorage.getItem('token');
 if (!token) {
-  window.location.href = '/index.html';
+  window.location.href = '/login.html';
 }
 
 const serverTabsElem = document.getElementById('nav-tab');
@@ -22,7 +8,7 @@ const tabContentElem = document.getElementById('nav-tabContent');
 let username = "";
 
 // Fetch user information
-fetch('https://admin.zlg.gg/user-info', {
+fetch('/user-info', {
   headers: {
     'Authorization': `Bearer ${token}`,
   },
@@ -35,7 +21,7 @@ fetch('https://admin.zlg.gg/user-info', {
   .catch((error) => console.error('Error fetching user info:', error));
 
 // Fetch server list from backend
-fetch('https://admin.zlg.gg/servers', {
+fetch('/servers', {
   headers: {
     'Authorization': `Bearer ${token}`,
   },
@@ -89,7 +75,7 @@ fetch('https://admin.zlg.gg/servers', {
         consoleOutputElem.innerHTML += `<p>[${timestamp}] ${username} initiated Command: ${command}</p>`;
 
         try {
-          const response = await fetch('https://admin.zlg.gg/send-command', {
+          const response = await fetch('/send-command', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -122,3 +108,7 @@ fetch('https://admin.zlg.gg/servers', {
     });
   })
   .catch((error) => console.error('Error fetching servers:', error));
+
+function convertNewlinesToBr(str) {
+  return str.replace(/\n/g, '<br>');
+}
