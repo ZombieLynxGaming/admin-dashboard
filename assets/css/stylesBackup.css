@@ -1,0 +1,135 @@
+body {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.card {
+    background-color: #444 !important;
+}
+
+.stat-section {
+    margin: 30px 0 20px 0px;
+}
+
+.stat-number {
+    font-weight: bolder;
+    font-size: 2rem; /* Increase the font size for the numbers */
+    background: linear-gradient(180deg, #FFFFFF, #BF9B1D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media (max-width: 599.98px) {
+    /* Adjusting specific cases where value is "0" */
+    .stat-number {
+        font-size: 2.5rem; /* Double the font size for mobile */
+    }
+  }
+
+.stat-item p {
+    margin: 0;
+}
+
+.right-side p {
+    font-weight: bolder;
+    font-size: 2rem; /* Match the font size for the numbers */
+    line-height: 1; /* Ensure the line height matches the left-side container */
+    margin: 0; /* Remove default margin */
+    background: linear-gradient(180deg, #FFFFFF, #BF9B1D); /* Match the gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nk-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 86vh;
+}
+
+.nk-main > .container {
+    flex: 1;
+}
+
+.card-body {
+    background: radial-gradient(circle, #2F3541 0%, #212326 100%);
+    padding: 0px;
+    border-radius: 10px;
+    height: 575px; /* Default height for medium and larger screens */
+  }
+
+.card-body .d-flex {
+    /* margin-bottom: 20px; */
+}
+
+.card-body .d-flex .right-side {
+    margin-left: 20px;
+}
+
+.leaderboard-card {
+    margin-bottom: 20px;
+}
+
+p, td{
+    color: gray;
+    font-weight: bolder;
+}
+
+
+.table-dark.table-striped {
+    color: #807e7a; /* Match the icon color */
+    border-color: #807e7a; /* Match the icon color */
+}
+
+.table-dark.table-striped th,
+.table-dark.table-striped td {
+    border-color: #807e7a; /* Match the icon color */
+}
+
+.card-title {
+    color: whitesmoke;
+}
+
+.card-text {
+    color: whitesmoke;
+}
+
+.rounded-left {
+    border-top-left-radius: 25px; /* Adjust the value as needed */
+    border-bottom-left-radius: 25px; /* Adjust the value as needed */
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.membership-text {
+    padding: 1px!important;
+    font-size: larger;
+    color: whitesmoke;
+}
+
+.membership.admin {
+    padding: 1px!important;
+    background: radial-gradient(circle, #dd163b, #8b0000) !important;
+}
+
+.membership.vibranium {
+    padding: 1px!important;
+    background: radial-gradient(circle, #b833a1, #a30d8a) !important;
+}
+
+.membership.diamond {
+    padding: 1px!important;
+    background: radial-gradient(circle, #3ca79e, #19e9d8) !important;
+}
+
+.membership.gold {
+    padding: 1px!important;
+    background: radial-gradient(circle, #d8ba0e, #d8ba0e) !important;
+}
+
+.membership.standard {
+    padding: 1px!important;
+    background: radial-gradient(circle, #139257, #139257) !important;
+}
